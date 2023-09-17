@@ -10,6 +10,8 @@ function App() {
 
   let limit = 10;
 
+  
+// ini pakai axios
   useEffect(() => {
     const getComments = async () => {
       try {
@@ -29,6 +31,8 @@ function App() {
     
   }, [limit, setPageCount])
 
+
+  // ini pakai fetch
   // useEffect(() => {
   //   const getComments = async () => {
   //     const res = await fetch(
@@ -49,7 +53,10 @@ function App() {
   // }, []);
 
   console.log(items);
+
 // cara menjalankannya: json-server --watch db.json --port 3004
+
+// ini pakai axios
   const fetchComments = async (currentPage) => {
     try {
       const response = await axios.get(
@@ -63,7 +70,7 @@ function App() {
     }
   };
   
-
+  // ini pakai fetch
   // const fetchComments = async (currentPage) => {
   //   const res = await fetch(
   //     `http://localhost:3004/comments?_page=${currentPage}&_limit=${limit}`
